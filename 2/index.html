@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="../angular-1.0.2/angular.min.js"></script>
+    <script src="item.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <div ng-controller="ItemCtrl">
+      <h2>Items<h2>
+        <li ng-repeat="item in items">
+          <span>{{item.text}}</span>
+        </li>
+        <form ng-submit="addItem()">
+          <input type="text" ng-model="itemText"  size="30"
+                         placeholder="add new item here">
+                  <input class="btn-primary" type="submit" value="add">
+        </form>
+    </div>
+  </body>
+</html>
